@@ -11,6 +11,24 @@ const ContainerContainer = styled.div`
     flex-wrap: wrap;
 `;
 
+const ButtonContainer = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: center;
+`;
+
+const BetterH1 = styled.h1`
+    width: 60%;
+    border-bottom: 2px solid black;
+`;
+
+const BetterButton = styled.button`
+  font-weight:bold;
+  padding: 3%;
+  margin: 0 4%;
+`;
+
 // const proxy = `https://cors-anywhere.herokuapp.com/`;
 // const url = `https://swapi.co/api/people/?page=${page}`;
 
@@ -43,14 +61,21 @@ const App = () => {
 
   return (
     <div className="App">
-      <button onClick={() =>{
-        if(page > 1){
-          setPage(page - 1)
-      }else(
-        console.log('you\'re at the begining')
-      )}}>prev page</button>
-      <button onClick={()=> {setPage(page + 1)}}>next page</button>
-      <h1 className="Header">React Wars</h1>
+      <ButtonContainer>
+        <BetterButton onClick={() =>{
+          if(page > 1){
+            setPage(page - 1)
+        }else(
+          console.log('you\'re at the begining')
+        )}}>Prev Page</BetterButton>
+
+        <BetterH1 className="Header">
+          <h1>React Wars</h1>
+          <p>Current Page [{page}]</p>
+          </BetterH1>
+        
+        <BetterButton onClick={()=> {setPage(page + 1)}}>Next Page</BetterButton>
+      </ButtonContainer>
       <ContainerContainer>
         {data.map((item, index) => {
             return <StarWarsCard data= {item} key={index}/>;
