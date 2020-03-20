@@ -13,12 +13,11 @@ const ContainerContainer = styled.div`
 
 const ButtonContainer = styled.div`
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-around;
   align-content: center;
 `;
 
-const BetterH1 = styled.h1`
+const BetterH1 = styled.div`
     width: 60%;
     border-bottom: 2px solid black;
 `;
