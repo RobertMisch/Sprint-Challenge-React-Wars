@@ -4,8 +4,16 @@ import styled from "styled-components"
 const Container = styled.div`
     background-color: white;
     opacity:50%;
-    width: 40%
+    width: 40%;
+    margin: 2% 0;
+    font-weight:bold;
 `;
+
+// const betterFont = styled.div`
+//     font-weight:bold;
+//     font-size: 2rem;
+//     width: 40%;
+// `;
 
 const StarWarsCard = (props) => {
     return(
@@ -16,7 +24,7 @@ const StarWarsCard = (props) => {
             <p>Haircolor: {props.data.hair_color}</p>
             <p>Eyecolor: {props.data.eye_color}</p>
             <p>Skincolor: {props.data.skin_color}</p>
-            <p>Birth Year: {props.data.bitth_year}</p>
+            <p>Birth Year: {props.data.birth_year}</p>
             <p>Gender: {props.data.gender}</p>
         </Container>
     )
